@@ -1,0 +1,6 @@
+rm $2;
+for x in {A..Z}
+do
+        grep -oh $x $1 >> $2;
+done
+uniq -c $2 | sort -rg | head -n $3;
